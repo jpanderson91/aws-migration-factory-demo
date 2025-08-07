@@ -2,22 +2,22 @@
 
 [![Deploy Status](https://img.shields.io/badge/Deploy-Success-green)]() [![Cost Optimized](https://img.shields.io/badge/Cost-Optimized-blue)]() [![Portfolio Ready](https://img.shields.io/badge/Portfolio-Ready-brightgreen)]() [![AWS](https://img.shields.io/badge/AWS-Multi--Service-orange)]() [![Terraform](https://img.shields.io/badge/IaC-Terraform-purple)]()
 
-> 🎯 **Enterprise-grade security analytics pipeline for real-time threat detection and compliance monitoring**
+> 🎯 **Enterprise-grade migration automation framework for large-scale cloud migrations and portfolio analysis**
 
 ## 🚀 **Quick Start**
 
-### ⚡ **Basic Deployment** - Production Ready ($15/month)
-Real-time security event processing with automated threat detection
+### ⚡ **Basic Deployment** - Production Ready ($25/month)
+Migration factory with portfolio analysis and automated migration workflows
 
-**Features:** Kinesis Data Streams, Lambda Processing, S3 Storage, CloudWatch Dashboards
+**Features:** Application Migration Service (MGN), Migration Hub, CloudFormation, Portfolio Analysis
 **Perfect for:** Portfolio demonstrations, interviews, professional projects
 **→ [Deploy Basic Version](README.md#basic-deployment)**
 
-### 🏢 **Enterprise Demo** - Full Architecture ($100-200/month)
-Full enterprise security operations center simulation with advanced analytics
+### 🏢 **Enterprise Demo** - Full Migration Factory ($150-300/month)
+Complete migration factory with advanced automation, wave planning, and governance
 
-**Features:** MSK Kafka, ECS Processing, QuickSight Analytics, Advanced Monitoring
-**Perfect for:** Enterprise demos, technical deep-dives, team alignment
+**Features:** Full MGN Automation, Migration Hub, Advanced Analytics, Wave Management
+**Perfect for:** Enterprise demos, technical deep-dives, migration planning
 **→ [Deploy Enterprise Demo](enterprise-demo/)**
 
 ---
@@ -27,55 +27,60 @@ Full enterprise security operations center simulation with advanced analytics
 This repository showcases **senior-level AWS capabilities** through:
 
 ### 🏗️ **Architecture Highlights**
-- **{{ARCH_HIGHLIGHT_1}}**: {{ARCH_DESCRIPTION_1}}
-- **{{ARCH_HIGHLIGHT_2}}**: {{ARCH_DESCRIPTION_2}}
-- **{{ARCH_HIGHLIGHT_3}}**: {{ARCH_DESCRIPTION_3}}
-- **{{ARCH_HIGHLIGHT_4}}**: {{ARCH_DESCRIPTION_4}}
+- **Migration Automation**: End-to-end MGN integration with automated server replication
+- **Portfolio Discovery**: Automated server inventory and dependency mapping
+- **Wave Management**: Intelligent batching with dependency-aware scheduling
+- **Cost Optimization**: Resource rightsizing and migration cost analysis
 
 ## 📊 **Technical Skills Demonstrated**
 
 | Skill Area | Basic Version | Enterprise Demo |
 |------------|---------------|-----------------|
 | **Infrastructure as Code** | ✅ Terraform | ✅ Advanced Terraform Modules |
-| **{{SKILL_1}}** | ✅ {{BASIC_SKILL_1}} | ✅ {{ENTERPRISE_SKILL_1}} |
-| **{{SKILL_2}}** | ✅ {{BASIC_SKILL_2}} | ✅ {{ENTERPRISE_SKILL_2}} |
-| **{{SKILL_3}}** | ✅ {{BASIC_SKILL_3}} | ✅ {{ENTERPRISE_SKILL_3}} |
+| **Migration Planning** | ✅ Basic Wave Planning | ✅ Advanced Dependency Analysis |
+| **Server Discovery** | ✅ Automated Inventory | ✅ Deep Application Mapping |
+| **Portfolio Analysis** | ✅ Migration Assessment | ✅ Business Case Generation |
 | **DevOps Practices** | ✅ CI/CD Ready | ✅ Enterprise Automation |
 | **Security** | ✅ IAM + Encryption | ✅ VPC + Advanced Security |
 
 ## 📸 **Live Dashboard Screenshots**
 
 ![Main Dashboard](docs/screenshots/main-dashboard.png)
-*Main Dashboard - Shows {{DASHBOARD_DESCRIPTION}}*
+*Main Dashboard - Shows migration progress, server status, and portfolio analysis*
 
-> 🎯 **Portfolio Demonstration**: These screenshots show a live, working AWS security-analytics processing real data with zero errors and fast performance.
+> 🎯 **Portfolio Demonstration**: These screenshots show a live, working AWS migration factory processing migration workflows with zero errors and efficient automation.
 
-> *Designed for security teams and compliance officers requirements - demonstrating expertise in AWS services, event-driven architecture, and cost optimization strategies.*
+> *Designed for migration teams and enterprise architects - demonstrating expertise in AWS migration services, automation frameworks, and large-scale migration strategies.*
 
 ## 🏗️ Architecture
 
 ```mermaid
 graph TB
-    {{MERMAID_ARCHITECTURE}}
+    A[Source Servers] --> B[AWS MGN]
+    B --> C[Migration Hub]
+    C --> D[Wave Planning]
+    D --> E[Target AWS Environment]
+    F[Portfolio Analysis] --> C
+    G[CloudWatch Monitoring] --> B
 ```
 
 ## 📊 Key Features
 
 ### ✅ **Deployed & Functional**
-- **{{FEATURE_1}}**: {{FEATURE_1_DESCRIPTION}}
-- **{{FEATURE_2}}**: {{FEATURE_2_DESCRIPTION}}
-- **{{FEATURE_3}}**: {{FEATURE_3_DESCRIPTION}}
-- **Cost-Optimized**: ~$15/month for full functionality
+- **Migration Factory Automation**: End-to-end migration workflow automation with MGN
+- **Portfolio Analysis**: Automated server discovery and migration assessment
+- **Wave Management**: Organized migration batches with dependency tracking
+- **Cost-Optimized**: ~$25/month for full migration factory functionality
 
 ### 🔒 **Security Features**
-- **{{SECURITY_1}}**: {{SECURITY_1_DESCRIPTION}}
-- **{{SECURITY_2}}**: {{SECURITY_2_DESCRIPTION}}
-- **{{SECURITY_3}}**: {{SECURITY_3_DESCRIPTION}}
+- **IAM Role Management**: Secure service-to-service authentication
+- **VPC Network Isolation**: Isolated migration environment with security groups
+- **Encryption in Transit**: All migration data encrypted during transfer
 
-### 🗄️ **Data Architecture**
-- **{{DATA_1}}**: {{DATA_1_DESCRIPTION}}
-- **{{DATA_2}}**: {{DATA_2_DESCRIPTION}}
-- **{{DATA_3}}**: {{DATA_3_DESCRIPTION}}
+### 🗄️ **Migration Architecture**
+- **Server Discovery**: Automated server inventory and dependency mapping
+- **Migration Planning**: Wave planning with dependency analysis
+- **Cutover Automation**: Automated cutover scheduling and execution
 
 ### 🛠️ **Enterprise Ready**
 - **Infrastructure as Code**: Complete Terraform deployment
@@ -92,7 +97,7 @@ graph TB
 # Install required tools
 aws --version          # AWS CLI v2
 terraform --version    # Terraform 1.5+
-{{ADDITIONAL_PREREQUISITES}}
+python --version       # Python 3.8+ for automation scripts
 
 # Configure AWS credentials
 aws configure sso --profile aws-migration-factory-demo
@@ -102,7 +107,7 @@ aws sts get-caller-identity --profile aws-migration-factory-demo
 ### Deploy Infrastructure (8-10 minutes)
 ```powershell
 # Clone and deploy
-git clone {{REPO_URL}}
+git clone https://github.com/jpanderson91/aws-migration-factory-demo.git
 cd aws-migration-factory-demo/terraform
 
 # Initialize and deploy
@@ -110,24 +115,25 @@ terraform init
 terraform apply -auto-approve
 
 # Verify deployment
-{{VERIFICATION_COMMANDS}}
+aws mgn describe-source-servers --profile aws-migration-factory-demo
+aws migrationhub describe-application-state --profile aws-migration-factory-demo
 ```
 
 ### Test the System
 ```powershell
-# Generate test data
+# Generate test migration data
 cd ../testing
-python test_security-analytics.py
+python test_migration_factory.py
 
 # View live dashboards (URLs from terraform output)
 terraform output dashboard_urls
 ```
 
 **Expected Results:**
-- ✅ {{EXPECTED_1}}
-- ✅ {{EXPECTED_2}}
-- ✅ {{EXPECTED_3}}
-- ✅ Zero processing errors
+- ✅ Migration factory dashboard showing server inventory
+- ✅ Portfolio analysis with migration readiness assessment
+- ✅ Wave planning with automated dependency mapping
+- ✅ Zero migration workflow errors
 
 ## 📁 Project Structure
 
@@ -138,18 +144,18 @@ aws-migration-factory-demo/
 │   ├── ISSUE_TRACKING.md       # Complete issue resolution log
 │   ├── PROJECT_STATUS.md       # Portfolio status summary
 │   ├── cost-analysis.md        # Cost optimization analysis
-│   ├── SECURITY_CHECKLIST.md   # Security verification checklist
+│   ├── MIGRATION_CHECKLIST.md  # Migration verification checklist
 │   └── screenshots/            # Professional dashboard images
 ├── src/                    # 💻 Source code
-│   ├── Kinesis/   # Primary service implementation
-│   └── Lambda/ # Secondary service implementation
+│   ├── migration-tools/   # Primary migration automation
+│   └── portfolio-analysis/ # Portfolio assessment tools
 ├── terraform/             # 🏗️ Infrastructure as Code
 │   ├── main.tf           # Core infrastructure configuration
-│   ├── {{SERVICE_1}}.tf  # Service-specific configurations
+│   ├── migration-hub.tf  # Migration Hub configuration
 │   ├── variables.tf      # Input variables
 │   └── outputs.tf        # Output values
 ├── testing/               # 🧪 Testing & validation
-│   ├── test_security-analytics.py  # End-to-end testing
+│   ├── test_migration_factory.py  # End-to-end testing
 │   └── validation/       # Test configurations
 ├── scripts/               # 🛠️ Automation scripts
 │   └── aws-session/      # AWS session management
@@ -169,7 +175,7 @@ aws-migration-factory-demo/
 | [**Project Status**](docs/PROJECT_STATUS.md) | Portfolio summary | Hiring managers |
 | [**Issue Resolution**](docs/ISSUE_TRACKING.md) | Problem-solving skills | Technical interviewers |
 | [**Cost Analysis**](docs/cost-analysis.md) | Financial responsibility | Management |
-| [**Security Checklist**](docs/SECURITY_CHECKLIST.md) | Security verification | Security teams |
+| [**Migration Checklist**](docs/MIGRATION_CHECKLIST.md) | Migration verification | Migration teams |
 
 ---
 
@@ -177,21 +183,21 @@ aws-migration-factory-demo/
 
 ### **For Hiring Managers:**
 - ✅ **Working Infrastructure** - Live dashboards with real metrics
-- ✅ **Cost Consciousness** - $15/month operational cost with enterprise features
+- ✅ **Cost Consciousness** - $25/month operational cost with enterprise features
 - ✅ **Professional Documentation** - Complete project lifecycle documentation
 - ✅ **Problem-Solving Skills** - Documented troubleshooting and resolution process
 
 ### **For Technical Teams:**
 - ✅ **Infrastructure as Code** - Complete Terraform automation with best practices
-- ✅ **{{TECHNICAL_HIGHLIGHT_1}}** - {{TECHNICAL_DESCRIPTION_1}}
-- ✅ **{{TECHNICAL_HIGHLIGHT_2}}** - {{TECHNICAL_DESCRIPTION_2}}
+- ✅ **Migration Automation** - End-to-end AWS MGN integration and orchestration
+- ✅ **Portfolio Analysis** - Automated discovery and assessment tooling
 - ✅ **Monitoring & Observability** - Comprehensive CloudWatch integration
 
 ### **For Enterprise Stakeholders:**
-- ✅ **Enterprise Alignment** - {{ENTERPRISE_ALIGNMENT_DESCRIPTION}}
-- ✅ **Scalable Design** - From $15/month to enterprise-scale deployment options
-- ✅ **Compliance Ready** - Audit logging, encryption, and data governance
-- ✅ **{{ENTERPRISE_FEATURE}}** - {{ENTERPRISE_FEATURE_DESCRIPTION}}
+- ✅ **Enterprise Alignment** - Large-scale migration factory methodology and best practices
+- ✅ **Scalable Design** - From $25/month to enterprise-scale migration factory deployment options
+- ✅ **Compliance Ready** - Audit logging, encryption, and migration governance
+- ✅ **Migration Planning** - Complete wave planning and dependency management
 
 ---
 
@@ -211,7 +217,7 @@ aws-migration-factory-demo/
 **Project Status**: ✅ **Production Ready**
 **Last Updated**: 2025-08-07
 **AWS Services**: 6+ integrated services
-**Cost Target**: $15-100-200/month (configurable)
+**Cost Target**: $25-150-300/month (configurable)
 **Deployment Time**: 8-10 minutes
 
 ## 📞 Support
@@ -228,4 +234,4 @@ For questions about this implementation or enterprise integration:
 **Project Status**: ✅ Production Ready
 **Last Updated**: 2025-08-07
 **AWS Services**: 6+ integrated services
-**security-analytics Focus**: Enterprise architecture alignment
+**Migration Factory Focus**: Enterprise migration architecture alignment

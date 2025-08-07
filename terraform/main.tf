@@ -22,7 +22,7 @@ provider "aws" {
       ManagedBy          = "Terraform"
       Owner              = var.owner
       CostCenter         = var.cost_center
-      Purpose            = "Security Analytics and Threat Detection"
+      Purpose            = "Migration Factory and Portfolio Analysis"
       PortfolioProject   = "true"
       CreatedDate        = formatdate("YYYY-MM-DD", timestamp())
     }

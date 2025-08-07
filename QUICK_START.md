@@ -1,14 +1,14 @@
 # aws-migration-factory-demo - Quick Start Guide
 
-> ⚡ **Deploy working AWS security-analytics in 8-10 minutes**
+> ⚡ **Deploy working AWS Migration Factory in 8-10 minutes**
 
 ## 🎯 **What You'll Get**
 
 After following this guide, you'll have:
-- ✅ **Live security-analytics** processing real data
-- ✅ **Working dashboards** with metrics and monitoring
-- ✅ **Cost-optimized setup** (~$15/month)
-- ✅ **Portfolio-ready demonstration** with screenshots
+- ✅ **Live migration factory** with portfolio analysis tools
+- ✅ **Working dashboards** for migration tracking and metrics
+- ✅ **Cost-optimized setup** (~$25/month)
+- ✅ **Portfolio-ready demonstration** with migration automation
 
 ---
 
@@ -79,11 +79,11 @@ dashboard_urls = {
 
 ### Step 3: Verify Deployment
 ```powershell
-# Check Kinesis status
-{{VERIFICATION_COMMAND_1}}
+# Check Migration Hub status
+aws mgn describe-source-servers --profile aws-migration-factory-demo
 
-# Check Lambda status
-{{VERIFICATION_COMMAND_2}}
+# Check Migration Factory status
+aws migrationhub describe-application-state --profile aws-migration-factory-demo
 
 # View all resources
 terraform output
@@ -93,7 +93,7 @@ terraform output
 
 ## 🧪 **Test the System (3 minutes)**
 
-### Generate Test Data
+### Generate Test Migration Data
 ```powershell
 # Navigate to testing directory
 cd ../testing
@@ -101,16 +101,16 @@ cd ../testing
 # Install Python dependencies (if needed)
 pip install -r requirements.txt
 
-# Run end-to-end test
-python test_security-analytics.py
+# Run end-to-end migration test
+python test_migration_factory.py
 ```
 
 **Expected Results:**
 ```
-✅ {{TEST_RESULT_1}}
-✅ {{TEST_RESULT_2}}
-✅ {{TEST_RESULT_3}}
-✅ All tests passed - System is working correctly!
+✅ Migration Hub configured successfully
+✅ Server discovery completed
+✅ Portfolio analysis generated
+✅ All tests passed - Migration Factory is working correctly!
 ```
 
 ### View Live Dashboards
